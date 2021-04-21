@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <title>Calculadora Dinâmica</title>
+    </head>
+    <body>
+        <script>
+            //aplicação calculadora dinamica
+
+            //Queremos um número inicial
+            //Queremos um sinal (tipo de operação)
+            //Quero um número final
+
+            var numeroInicial = prompt("Informe o primeiro número...")
+            var sinal = prompt("Informe o sinal da sua operação...")
+            while(sinal != '-' && sinal != '+' && sinal != '/' && sinal != '*'){
+                alert('Por favor informe um sinal válido!');
+                    sinal = prompt('Informe o sinal da sua operação...')
+            }
+            var numeroFinal = prompt('Informe o número final...')
+            
+            //Funções para converter para número um string>
+            numeroInicial = parseInt(numeroInicial);
+            numeroFinal = parseInt(numeroFinal);
+            
+            var resutadoFinal = 0;
+            if(sinal == '+'){
+                resutadoFinal = numeroInicial + numeroFinal;
+            }else if (sinal == '-'){
+                resutadoFinal = numeroInicial - numeroFinal;
+            }else if (sinal == '/'){
+                resutadoFinal = numeroInicial / numeroFinal;
+            }else if (sinal == '*'){
+                resutadoFinal = numeroInicial * numeroFinal;
+            }
+            alert('o resultado final é: '+ resutadoFinal)
+            
+        </script>
+    </body>
+</html>
